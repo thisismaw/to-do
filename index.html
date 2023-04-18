@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>To-Do List</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<div id="clock">
-  <span id="hours"></span>:
-  <span id="minutes"></span>:
-  <span id="seconds"></span>
-</div>
+  <head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <div class="current-time"></div>
+      <input type="text" placeholder="Add task..." id="taskInput">
+      <button onclick="addTask()">Add</button>
+      <div id="taskList"></div>
+      <button id="clearButton">Clear</button>
 
-		<h1>To-Do List</h1>
-		<form id="add-task-form">
-			<label for="task-name">Task Name:</label>
-			<input type="text" id="task-name" name="task-name" placeholder="Enter task ">
-			<button type="submit">Add Task</button>
-		</form>
-		<ul id="task-list"></ul>
-	</div>
-	<script type="text/javascript" src="script.js"></script>
-</body>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
