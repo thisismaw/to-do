@@ -71,3 +71,20 @@ function deleteTask(taskId) {
   const taskItem = taskList.querySelector(`[data-id="${taskId}"]`);
   taskItem.remove();
 }
+
+function updateTime() {
+  const date = new Date();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const hoursString = hours.toString().padStart(2, '0');
+  const minutesString = minutes.toString().padStart(2, '0');
+  const secondsString = seconds.toString().padStart(2, '0');
+  const timeString = `${hoursString}:${minutesString}:${secondsString}`;
+  document.querySelector('#hours').textContent = hoursString;
+  document.querySelector('#minutes').textContent = minutesString;
+  document.querySelector('#seconds').textContent = secondsString;
+}
+
+updateTime(); // update immediately
+setInterval(updateTime, 1000); // update every second

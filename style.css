@@ -5,68 +5,79 @@
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	background-color: #f9f9f9;
-	color: #333;
+	background: #151515;
+	color: #fff;
+	font-family: 'Courier New', monospace;
 }
 
 .container {
 	max-width: 800px;
-	margin: 3em auto;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+	padding: 50px;
 }
 
 h1 {
+	font-size: 4em;
+	margin-bottom: 50px;
 	text-align: center;
-	margin-bottom: 20px;
-	font-weight: 300;
-	font-size: 48px;
-	color: #333;
-	text-shadow: 1px 1px #fff;
+	text-shadow: 0 0 20px #00bebe;
 }
-
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 form label {
-	display: block;
-	margin-bottom: 10px;
-	font-weight: bold;
-	color: #666;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+	text-shadow: 0 0 10px #00bebe;
 }
 
 form input[type="text"] {
-	display: block;
 	width: 100%;
 	padding: 10px;
-	border: none;
 	border-radius: 5px;
+	border: none;
 	margin-bottom: 20px;
-	background-color: #f0f0f0;
-	color: #333;
-	font-size: 18px;
+	background-color: rgba(255, 255, 255);
+	
+	font-size: 1.2em;
 }
 
-form button {
-	background-color: #4caf50;
+button[type="submit"] {
+	background-color: #ed68ff;
 	color: #fff;
-	padding: 10px;
 	border: none;
 	border-radius: 5px;
-	cursor: pointer;
-	font-size: 18px;
+	padding: 10px 20px;
+	font-size: 1.2em;
+	text-shadow: 0 0 10px #ed68ff;
+	transition: all 0.2s ease-in-out;
 }
+
+button[type="submit"]:hover {
+	background-color: #00bebe;
+	color: #fff;
+	text-shadow: 0 0 20px #00bebe;
+	box-shadow: 0 0 20px #00bebe;
+	cursor: pointer;
+}
+
 
 ul {
 	list-style: none;
-	margin-top: 20px;
+	padding: 0;
 }
 
 li {
-	display: flex;
-	align-items: center;
+	font-size: 1.5em;
 	padding: 10px;
-	border-bottom: 1px solid #ccc;
+	margin: 2em;
+	background-color: rgba(100, 100, 100, 0.5);
+	border-radius: 5px;
+	text-align: center;
+	text-shadow: 0 0 10px #00ff00;
+	box-shadow: 0 0 10px #00bebe;
 }
 
 li:last-of-type {
@@ -84,7 +95,7 @@ li .task-name {
 }
 
 li .delete-button {
-	background-color: #dc3545;
+	background-color: #ed68ff;
 	color: #fff;
 	padding: 10px;
 	border: none;
@@ -92,3 +103,9 @@ li .delete-button {
 	cursor: pointer;
 	font-size: 18px;
 }
+#clock {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+  }
+  
